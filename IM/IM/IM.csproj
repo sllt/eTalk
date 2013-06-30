@@ -1,0 +1,703 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C1F4E3FC-209A-457E-BE29-34FCC8D22128}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IM</RootNamespace>
+    <AssemblyName>IM</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="dyForm, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\Code\C#\dyForm\dyForm\bin\Debug\dyForm.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Model\User.cs" />
+    <Compile Include="View\FrmChat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmChat.Designer.cs">
+      <DependentUpon>FrmChat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmNotification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmNotification.Designer.cs">
+      <DependentUpon>FrmNotification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="View\FrmChat.resx">
+      <DependentUpon>FrmChat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmNotification.resx">
+      <DependentUpon>FrmNotification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1_100.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\afternoon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aio_head_normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aio_quickbar_cut.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aio_quickbar_face.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aio_quickbar_flirtationface.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aio_quickbar_font.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aio_quickbar_inputassist.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aio_quickbar_more.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aio_quickbar_register.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aio_quickbar_richface.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aio_quickbar_screen1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aio_quickbar_screen2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aio_quickbar_sendpic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aio_quickbar_twitter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AIO_SetBtn_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AIO_SetBtn_highlight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AIO_SetBtn_highlight_normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AIO_SetBtn_normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\all_inside_bkg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\allbtn_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\allbtn_highlight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\away %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BackPalace.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_close_disable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_close_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_close_highlight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_max_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_max_highlight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_max_normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_mini_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_mini_highlight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_mini_normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_restore_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_restore_highlight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_restore_normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_set_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_set_normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_set_press.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_Skin_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_Skin_highlight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_Skin_normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\busy %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_login_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_login_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_login_normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checkbox_hightlight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checkbox_normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checkbox_pushed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checkbox_tick_highlight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checkbox_tick_normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checkbox_tick_pushed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\corner_back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\corner_back_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\corner_back_press.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\corner_left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\corner_left_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\corner_left_press.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\corner_right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\corner_right_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\corner_right_press.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\duozhanghao1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\duozhanghao2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\duozhanghao3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\duozhanghao4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\duozhanghao5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\duozhanghao6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\frameBorderEffect_mouseDownDraw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\frameBorderEffect_normalDraw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imgRjp.BackgroundImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imoffline %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imonline %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\invisible %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login_inputbtn_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login_inputbtn_highlight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login_inputbtn_normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu_btn_highlight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu_btn_normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu_check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mima.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mima_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mima_press.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\morning.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mute %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\night.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\noon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Norml.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pictureBox1.Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Qme %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spin_normal_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\texture.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\texture2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ToolbarBtnDown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ToolbarBtnNormal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zhuce.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zhuce_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zhuce_press.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RegBackGround.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\qzoneicon_gray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aa %288%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aa %289%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aa %2810%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aa %2811%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aa %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aa %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aa %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aa %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aa %285%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aa %286%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aa %287%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QQ截图20130610232527.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QQ截图20130610232600.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QQ截图20130610232612.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QQ截图20130610232633.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QQ截图20130610232644.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QQ截图20130610232720.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QQ截图20130610232753.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QQ截图20130610232804.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QQ截图20130610232941.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QQ截图20130610233020.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QQ截图20130610233027.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QQ截图20130610233037.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QQ截图20130610233047.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QQ截图20130610233056.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QQ截图20130610233104.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QQ截图20130610233110.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QQ截图20130610233116.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QQ截图20130610233125.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QQ截图20130610233227.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QQ截图20130610233236.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QQ截图20130610233243.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QQ截图20130610233254.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QQ截图20130610233301.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnTq.Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\skinToolStrip1.BaseItemDown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\skinToolStrip1.BaseItemMouse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\skinToolStrip3.BaseItemDown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\skinToolStrip3.BaseItemMouse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SkToolCdTwo.BaseItemDown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SkToolCdTwo.BaseItemMouse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toolStripButton1.Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toolStripButton2.Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toolStripButton3.Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toolStripButton4.Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toolStripButton5.Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toolStripButton6.Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toolStripButton7.Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toolStripButton8.Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toolStripButton9.Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toolStripButton10.Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toolStripButton11.Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toolStripButton12.Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toolStripButton13.Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toolStripButton14.Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toolStripButton15.Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toolStripButton16.Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toolStripButton17.Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toolStripButton18.Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toolStripButton19.Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toolStripButton20.Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toolStripDropDownButton4.Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toolStripMenuItem38.Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toolStripSplitButton2.Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toolStripSplitButton3.Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toolStripSplitButton4.Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnClose.DownBack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnClose.MouseBack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnClose.NormlBack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnSend.DownBack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnSend.MouseBack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnSend.NormlBack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imgChatShow.Image.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imgMeShow.Image.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imgyy2.Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pictureBox11.BackgroundImage.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\skinButtom3.DownBack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\skinButtom3.MouseBack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\skinButtom3.NormlBack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\skinToolStrip2.BaseItemDown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\skinToolStrip2.BaseItemMouse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\skToolMenu.BaseItemDown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\skToolMenu.BaseItemMouse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ToolFile.Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toolStripDropDownButton1.Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toolStripDropDownButton2.Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toolStripDropDownButton8.Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataLibrary\DataLibrary.csproj">
+      <Project>{43df9373-4a4c-4421-95b3-b3a2ee377f90}</Project>
+      <Name>DataLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
